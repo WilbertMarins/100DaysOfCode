@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    background: #000;
+    height: 100vh;
+    font-size: 36px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 96px;
+    line-height: 1.04167;
+    font-weight: 700;
+    letter-spacing: -.015em;
+  }
+.title{
+    background: linear-gradient(to left, #04ff2e98,#f88807);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ee03da;
+    transition: .5s ease-out;
+  }
+  
+  a:hover::after {
+    width: 100%;
+  }
