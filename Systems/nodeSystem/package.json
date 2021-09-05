@@ -1,0 +1,14 @@
+{
+  "name": "nodesystem",
+  "version": "1.0.0",
+  "description": "simple app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wilbert",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
