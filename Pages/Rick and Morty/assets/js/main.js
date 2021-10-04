@@ -13,9 +13,8 @@ fetch('https://rickandmortyapi.com/api/character',{
     //seleciona area de exibição geral
     var container = document.querySelector('.container');
 
-    //interpreta o json, vamos criar os cards
+    //interpreta o JSON, vamos criar os cards
     json.results.map(function(results){
-
         container.innerHTML+=
         `
         <div class="card">
@@ -23,8 +22,10 @@ fetch('https://rickandmortyapi.com/api/character',{
         <div class="centralized"> <img style="margin-top:5px" src=${results.image} > </div>
         
         <div class="standard-margin">
-            <h4>Nome: ${results.name}</>
-            <h4>Status: ${results.status}</>
+            <h2> ${results.name}</h2>
+            <ul class="status ${results.status}">
+                <li> <h4> ${results.status}</> </li>
+            </ul>
             <h4>Espécie: ${results.species}</>
             <h4>Gênero: ${results.gender}</>
             <h4>Localização: ${results.location.name}</>
