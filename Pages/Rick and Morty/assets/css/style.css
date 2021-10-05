@@ -1,4 +1,4 @@
-/*  */
+/* --main-background:#0f13eb; */
 
 /* standard aspects */
 * {
@@ -7,8 +7,15 @@
 
 /* variables */
 :root{
-    --varNome: valor (example)
-    color:var(--varNome)
+    --main-background:#121212;
+    --card-background:#9fb3b1;
+    --cover-background:#7be986;
+    --button-color:#f1f1f3;
+    --button-border:#8d713d;
+    --green-effect:#7fff00;
+    --alive:#0af70a;
+    --dead:#eb0404;
+    --unknown:#2410d3;
 }
 
 /* fonts */
@@ -21,7 +28,7 @@
 
 /* general structure */
 body{
-    background-color: #0f13eb;
+    background-color: var(--main-background);
     min-width: 360px;
     max-width:100vw;
     overflow-x: hidden;  
@@ -33,7 +40,7 @@ body{
     align-items: center;
 }
 
-/* ###### header ###### */
+/* ========== header ========== */
 h1{
     font-family: Ricks;
     font-size: 80px;
@@ -52,7 +59,7 @@ h1{
 
 .title::before{
     content: "";
-    background: rgb(123, 233, 134);
+    background:var(--cover-background);
     position: absolute;
     opacity: 0.8;
     top: 0;
@@ -63,20 +70,18 @@ h1{
 
 }
 
-/* ###### main structure ###### */
-
-#apresentation{
-
+/* ========== main structure ========== */
+#apresentation h2{
+    font-size:20px;
+    color:var( --button-color);
 }
 
-
 /*all-characters*/
-
 .container{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap
     
 }
@@ -85,33 +90,39 @@ h1{
 .card{
     margin-left: 25px;  
     margin-top: 15px;
-    background-color: rgb(224, 238, 228);
+    background-color:var(--card-background) ;
     width:350px;
     border-radius: 30px;
-
 }
 
 .status{
-    margin-left: -25px;  
+    margin-left: -25px;
+    border-radius: 18px;  
+}
+button{
+    background-color: var(--button-color);
+    border-radius: 18px;
+    border-color: var(--button-border);
 }
 .Alive ::marker{
-    color:#0af70a;
+    color:var(--alive);
 }
 .Dead ::marker{
-    color: rgb(235, 4, 4);;
+    color:var(--dead);
 }
 .unknown ::marker{
-    color: rgb(224, 95, 8);;
+    color:var(--unknown) ;
 }
 
 .standard-margin{
     margin-left: 25px;
 }
 
-/* ###### footer  ###### */
+/* ========== footer  ========== */
 footer{
     margin-top: 10px;
-    background-color: #7fff00;
+    background-color: var(--button-color);
+    font-size: 12px;
 }
 
 /*Scrool bar*/
@@ -119,11 +130,25 @@ footer{
     width: 10px;
 }
 ::-webkit-scrollbar-thumb{
-    background-color:#7fff00;
+    background-color:var(--green-effect);
     border-radius: 50px;
 }
 ::-webkit-scrollbar-track{
-    background-color:#0f13eb;
+    background-color:var(--main-background);
     border-radius: 50px;
+}
+
+/* ========== RESPONSIVE DESIGN - mobile/tablet ========== */
+@media (min-width: 360px) and (max-width: 768px) {
+    h1{
+        font-size: 40px;
+    }
+    .card{
+        margin-left: 5px; 
+    }
+    footer{
+        font-size: 6px;
+    }
+
 
 }

@@ -19,19 +19,26 @@ fetch('https://rickandmortyapi.com/api/character',{
         `
         <div class="card">
         
-        <div class="centralized"> <img style="margin-top:5px" src=${results.image} > </div>
+        <div class="centralized"> <img style="margin-top:10px" src=${results.image} > </div>
         
         <div class="standard-margin">
-            <h2> ${results.name}</h2>
-            <ul class="status ${results.status}">
-                <li> <h4> ${results.status}</> </li>
-            </ul>
+            
+        <h2> ${results.name}</h2>
+            
+            <button> 
+                <ul class="status ${results.status}">
+                    <li> <h4> ${results.status}</> </li>
+                </ul>
+            </button>
+            
             <h4>Espécie: ${results.species}</>
+            
             <h4>Gênero: ${results.gender}</>
+
             <h4>Localização: ${results.location.name}</>
         </div>
         
-        <h4 class="centralized" >ID: ${results.id}</>
+        <h4 class="centralized" >ID: #${results.id}</>
         
         </div>
 
