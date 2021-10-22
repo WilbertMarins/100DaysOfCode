@@ -34,8 +34,9 @@ Essa página foi desenvolvida com intuito de fornecer uma exemplificação do co
 
 - [x] Exibição dos personagens;
 - [x] Responsividade;
-- [ ] Paginação;
-- [ ] Exibir o primeiro episódio em que o personagem participou ao virar o cartão do mesmo.
+- [x] Paginação;
+- [ ] Filtro de personagens por pesquisa;
+- [ ] Mais infos ao clicar no card.
 
 ## Links Úteis
 - [Preview do projeto](https://wilbert-rick-and-morty.vercel.app/)

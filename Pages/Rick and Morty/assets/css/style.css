@@ -117,7 +117,13 @@ button{
 .standard-margin{
     margin-left: 25px;
 }
-
+/* ========== Botões de paginação  ========== */
+#buttons{
+    display:flex;
+    flex-direction: row;
+    margin-top: 20px;
+    color: var(--button-color);
+}
 /* ========== footer  ========== */
 footer{
     margin-top: 10px;
