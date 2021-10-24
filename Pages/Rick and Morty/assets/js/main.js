@@ -13,7 +13,6 @@ var next_page = 2;
 function main(number_page, request_) {
     var URLendpoint = id => `https://rickandmortyapi.com/api/character/?page=${id}`;
     var endpoint = URLendpoint(number_page);
-    
     //página atual
     var current_page = number_page;
 
@@ -35,26 +34,27 @@ fetch(endpoint,{
         `
         <div class="card">
         
-        <div class="centralized"> <img style="margin-top:10px" src=${results.image} > </div>
-        
-        <div class="standard-margin">
+            <div class="centralized"> <img style="margin-top:10px" src=${results.image} > </div>
             
-        <h2> ${results.name}</h2>
-            
-            <button> 
-                <ul class="status ${results.status}">
-                    <li> <h4> ${results.status}</> </li>
-                </ul>
-            </button>
-            
-            <h4>Espécie: ${results.species}</>
-            
-            <h4>Gênero: ${results.gender}</>
+            <div class="standard-margin">
+                <div class="character-name">
+                    <h2> ${results.name}</h2>
+                </div>
+                
+                <button> 
+                    <ul class="status ${results.status}">
+                        <li> <h4> ${results.status}</> </li>
+                    </ul>
+                </button>
+                
+                <h4>Espécie: ${results.species}</>
+                
+                <h4>Gênero: ${results.gender}</>
 
-            <h4>Localização: ${results.location.name}</>
-        </div>
-        
-        <h4 class="centralized" >ID: #${results.id}</>
+                <h4>Localização: ${results.location.name}</>
+            </div>
+            
+            <h4 class="centralized" >ID: #${results.id}</>
         
         </div>
 

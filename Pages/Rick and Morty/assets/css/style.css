@@ -94,7 +94,13 @@ h1{
     width:350px;
     border-radius: 30px;
 }
-
+.character-name{
+    margin-top: 5px;
+    height: 45px;    
+}
+.card h2{
+    font-size: 20px;
+}
 .status{
     margin-left: -25px;
     border-radius: 18px;  
