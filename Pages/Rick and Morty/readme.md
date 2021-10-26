@@ -3,7 +3,7 @@
 
 
 <p align="center" >
-  <img alt="Rick  and Morty page" title="RandM" src="assets/img/screenshot.png" />
+  <img alt="Rick  and Morty example page" title="Example" src="https://github.com/WilbertMarins/100DaysOfCode/blob/main/Pages/Rick%20and%20Morty/assets/img/screenshot.PNG" />
 </p>
 <br>
 
@@ -35,9 +35,11 @@ Essa página foi desenvolvida com intuito de fornecer uma exemplificação do co
 - [x] Exibição dos personagens;
 - [x] Responsividade;
 - [x] Paginação;
-- [ ] Filtro de personagens por pesquisa;
+- [ ] Favoritos;
+- [ ] Filtro de personagens por pesquisa(tem mas não está ativa);
 - [ ] Mais infos ao clicar no card.
 
 ## Links Úteis
+
 - [Preview do projeto](https://wilbert-rick-and-morty.vercel.app/)
 - [API do Rick and Morty](https://rickandmortyapi.com/)

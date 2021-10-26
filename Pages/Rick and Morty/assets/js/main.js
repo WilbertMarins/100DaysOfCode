@@ -80,5 +80,75 @@ fetch(endpoint,{
 
 }
 
+function searchItem(character_info) {
+    var URLendpoint = id => `https://rickandmortyapi.com/api/character/${id}`;
+    var counter = 0;
+    
+    //seleciona areas de exibição 
+    var container = document.querySelector('.container');
+    var page = document.querySelector('#page');
+    container.innerHTML=null;
+    page.innerHTML="Página 1 de 1";
+    for (let i = 1; i <= 671; i++) {
+
+            var endpoint = URLendpoint(i);
+            fetch(endpoint)
+            .then(response=>response.json())
+            .then(results=> {
+
+            if( (results.name.includes(character_info))||(results.id == character_info) ){
+                
+                counter +=1;
+
+                container.innerHTML+=
+                `
+                <div class="card">
+                
+                <div class="centralized"> <img style="margin-top:10px" src=${results.image} > </div>
+                
+                <div class="standard-margin">
+                    
+                <h2> ${results.name}</h2>
+                    
+                    <button> 
+                        <ul class="status ${results.status}">
+                            <li> <h4> ${results.status}</> </li>
+                        </ul>
+                    </button>
+                    
+                    <h4>Espécie: ${results.species}</>
+                    
+                    <h4>Gênero: ${results.gender}</>
+
+                    <h4>Localização: ${results.location.name}</>
+                </div>
+                
+                <h4 class="centralized" >ID: #${results.id}</>
+                
+                </div>
+                `;   
+            }  
+            
+            if(counter==0 && i ==671){
+                container.innerHTML=               
+                `   
+                <h2> 404... O personagem que requisitou não foi encontrado.</h2>
+                `;
+            }
+            
+        });
+
+    }
+
+    next_page = 2;
+    previous_page = 1;
+    current_page = 1;
+    
+    return previous_page,current_page,next_page;
+}
+
+
+
+
 //inicializa a 1ª página(padrão)
 main(current_page,"nothing") //page1
